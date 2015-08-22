@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="pt-br" > <![endif]-->
+<html class="no-js" lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta charset="utf-8" />
+<!-- If you delete this meta tag World War Z will become a reality -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PLUGIN</title>
+
+<!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/template_plugin.css" />
+
+<!-- If you are using the gem version, you need this only -->
+<link rel="stylesheet" href="css/app.css" />
+
+<script src="js/vendor/modernizr.js"></script>
+
+</head>
+<body>
+	<div class="medium-3 large-3 columns"></div>
+	<div class="medium-9 medium-right large-9 columns">
+		<div class="titulo-faixa">
+			<h3>ELEMENTOS FORMULÁRIO</h3>
+		</div>
+
+		<div class="panel-plugin2">
+			<form>
+				<div class="row">
+					<div class="medium-12 medium-centered large-12 columns">
+						<label>Input:<font>*</font> <span>(Alguma
+								observação)</span><br /> <input type="text" placeholder="Input padrão" />
+						</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="medium-3 large-3 columns">
+						<a href="#" class="button small success radius">Small</a>
+					</div>
+
+					<div class="medium-3 large-3 columns">
+						<a href="#" class="button large success radius">Large</a>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="medium-3 large-3 columns"></div>
+					<div class="medium-12 large-12 columns">
+						<div class="titulo-faixa">
+							<h3>TABELA</h3>
+						</div>
+						<div class="panel-plugin2">
+							<div class="medium-12 large-12 columns">
+								<div class="medium-12 large-12 columns">
+									<table class="medium-12 large-12 columns">
+										<thead>
+											<tr>
+												<th width="100">Table Header</th>
+												<th>Table Header</th>
+												<th width="80">Table Header</th>
+												<th width="80">Table Header</th>
+											</tr>
+										</thead>
+										<tbody>
+											<ui:repeat var="o" value="#{order.orderList}">
+												<tr>
+													<td>Lorem ipsum dolor</td>
+													<td>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit.</td>
+													<td>Lorem ipsum dolor</td>
+													<td>Lorem ipsum dolor</td>
+												</tr>
+											</ui:repeat>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="row">
+								<div class="medium-12 large-12 columns">
+									<ul class="inline-list">
+										<li><a href="#">Link 1</a></li>
+										<li><a href="#">Link 2</a></li>
+										<li><a href="#">Link 3</a></li>
+										<li><a href="#">Link 4</a></li>
+										<li><a href="#">Link 5</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="medium-6 large-6 columns">
+						<a href="#" class="button expand right">Expand</a>
+					</div>
+
+					<div class="medium-3 large-3 columns">
+						<a href="#" class="button alert left">Alert</a>
+					</div>
+
+					<div class="medium-3 large-3 columns">
+						<a href="#" class="button round success right">Round</a>
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script src="js/foundation/foundation.topbar.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>

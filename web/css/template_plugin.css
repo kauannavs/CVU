@@ -1,0 +1,203 @@
+.top-bar {
+	background:#A90000;
+	height:96px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button){
+	background:#A90000;
+	padding: 0 24px;
+	line-height: 50px;	
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+	background: #7B7B7A;
+	padding: 0 24px;
+	line-height: 50px;	
+}
+
+.top-bar-section ul li > a {
+  font-size: 1.000rem;
+  margin-top: 0px;  
+}
+
+.top-bar-section .nome-projeto li:not(.has-form) a:not(.button) {
+	background:#A90000;
+	padding: 0 24px;
+	line-height: 36px;	
+}
+
+.top-bar-section .nome-projeto li:not(.has-form) a:not(.button): hover {
+	padding: 0 24px;
+	line-height: 36px;
+}
+
+.top-bar-section .nome-projeto ul li > a {
+  font-size: 1.200rem;
+  margin-top: 0px;  
+}
+
+.panel-plugin{
+	margin-top: 2.22222em;
+	border-width: 2px;
+	padding: 3.25em;
+	border-style: solid;
+  	border-color: #d8d8d8;
+  	margin-bottom: 1.25rem; 
+  	background: #f2f2f2;
+}
+
+.small-block-grid-1{
+	margin-left: 12px;
+}
+
+.medium-block-grid-3 p.text-center{
+	font-size: 0.850rem;
+	line-height:1.3;
+}
+
+.top-bar.expanded {  
+  background: #5b9573;
+  height: auto;
+}
+
+.githubissues{
+  background: #7B7B7A;
+  padding: 1px 30px;
+  height: 6px;
+}
+
+.form-login{
+	margin-top:10%;
+}
+
+.titulo-login{
+  background-color: rgba(171, 19, 3, 0.83);
+  color: #FFFFFF;
+  padding:0.25rem 3.35rem;
+}
+
+.titulo-login h3 {
+  color: #FFFFFF;
+  margin: 15px 150px 15px 0;
+  font-size: 1.200rem;
+}
+
+.top-bar-section .dropdown plugin li.title h5 a {
+	font-size: medium;	
+}
+
+.conta-usuario{
+	height: 25px;
+    right: 25px;
+    position: fixed;
+    top: 0;
+    z-index: 99;	
+	
+}
+
+.conta-usuario p, .conta-usuario a{
+    color: white;
+    font-size: 0.75rem;
+}
+
+span{
+	font-size: 0.750rem;
+	color:#ff0000;	
+	}
+	
+font{
+	color:#ff0000;	
+}
+
+ul.off-canvas-list li a{
+	border-bottom-color: #242424;
+	font-size: 0.850rem;
+	color: #ffffff;	
+	line-height: normal;
+}
+
+ul.off-canvas-list li a:hover{
+	background: #242424;			
+}
+
+.off-canvas-list{
+	background-color: #333333;		
+}
+
+.panel-plugin-padrao{
+	margin-top: 0.0008em;
+	border-width: 1px;
+	padding: 2.25em;
+	border-style: solid;
+  	border-color: #d8d8d8;
+  	margin-bottom: 3.25rem; 
+  	background: #f2f2f2;
+}
+
+.panel-plugin-padrao p{
+	font-size: 0.900rem
+	
+}
+
+.titulo-faixa{
+  background-color: rgba(171, 19, 3, 0.83);
+  color: #FFFFFF;
+  padding:0.25rem 2.35rem;
+}
+
+.titulo-faixa h3 {
+  color: #FFFFFF;
+  margin: 9px 150px 9px 0;
+  font-size: 0.975rem;
+  font-weight: bold;
+}
+
+.disc li{
+	font-size: 0.900rem
+	
+}
+
+ol li{
+	font-size: 0.900rem
+	
+}
+
+fieldset legend {
+  font-weight: bold;
+  padding: 0 0.1875rem;
+  margin: 0;
+  margin-left: -0.1875rem;
+}
+
+.zurb-footer-bottom li p{
+	color: #FFFFFF;
+	font-size: 0.850rem;
+  	line-height: 1.3;
+	
+}
+
+footer {
+  max-width: 100%;
+  background: #333;
+  padding: 9px 0 9px;
+  height: 140px;
+  color:#FFFFFF;
+}
+
+footer img{
+	margin-top:30px;
+}
+
+footer p{
+	margin-top: 55px;
+	font-size: 0.970rem;
+}
+
+.ui-datepicker-header{
+	background-color: #f5f5f5;
+}
+
+object, embed {
+  height: 0;
+}
+

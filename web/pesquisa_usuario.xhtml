@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="pt-br" > <![endif]-->
+<html class="no-js" lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+<head>
+<meta charset="utf-8" />
+<!-- If you delete this meta tag World War Z will become a reality -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PLUGIN</title>
+
+<!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/template_plugin.css" />
+
+</head>
+<body>
+	<ui:insert name="menuPadraoTopo">
+		<ui:include src="/menu/menu_padrao_topo.xhtml" />
+	</ui:insert>
+
+	<div class="row">
+		<div class="medium-12 large-12 columns">
+			<ui:insert name="menuPadraoLateral">
+				<ui:include src="/menu/menu_padrao_lateral.xhtml" />
+			</ui:insert>
+			<div class="medium-9 large-9 columns">
+				<div class="titulo-faixa">
+					<h3>Pesquisa por usuários</h3>
+				</div>
+				<div class="panel-plugin-padrao">
+					<h:form>
+						<div class="row">
+							<div class="medium-4 large-4 columns">
+								<label>CPF:<br /> <h:inputText name="cpf"
+										value="#{pusuario.cpf}" placeholder="Informe CPF" />
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="medium-4 large-4 columns">
+								<label>Email:<br /> <h:inputText name="rg"
+										value="#{pusuario.email}" placeholder="Informe Email" />
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="medium-6 large-6 columns">
+								<label>Nome:<br /> <h:inputText name="nome"
+										value="#{pusuario.nome}" placeholder="Informe nome ou parte de um nome" />
+								</label>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="medium-6 large-6 columns">
+								<h:commandLink class="button large success radius right"
+									value="Pesquisar" actionListener="#{pusuario.pesquisar()}" />
+							</div>
+						</div>
+						
+						<div class="row">
+							<h:outputText value="#{pusuario.erro}" class="error"
+								rendered="#{pusuario.erro != null}" />
+							<h:outputText value="#{pusuario.sucesso}" class="success"
+								rendered="#{pusuario.sucesso != null}" />
+							<br /> <br />
+						</div>
+
+						<div class="row">
+							<div class="medium-3 large-3 columns"></div>
+							<div class="medium-12 large-12 columns">
+								<div class="titulo-faixa">
+									<h3>Usuários</h3>
+								</div>
+								<div class="panel-plugin2">
+									<div class="row">
+										<div class="medium-12 large-12 columns">
+											<table class="medium-12 large-12 columns">
+												<thead>
+													<tr>
+														<th width="60">CPF</th>
+														<th width="60">Email</th>
+														<th width="130">Nome</th>
+														<th width="10">Operações</th>
+													</tr>
+												</thead>
+												<tbody>
+													<ui:repeat var="u" value="#{pusuario.usuarios}">
+														<tr>
+															<td>#{u.cpf}</td>
+															<td>#{u.nome}</td>
+															<td>#{u.email}</td>
+															<td>
+																<h:commandLink value="Ver detalhes"
+																	actionListener="#{pusuario.ver(u.id)}" /> | 
+																<h:commandLink
+																	onclick="if (!confirm('Deseja excluir este registro?')) return false"
+																	value="Remover"
+																	actionListener="#{pusuario.remover(u.id)}" />
+															</td>
+														</tr>
+													</ui:repeat>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="row">
+										<h:commandLink class="button small radius right"
+											value="Adicionar" 
+											actionListener="#{pusuario.adicionar()}" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</h:form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="row">
+			<div class="medium-12 large-12 columns">
+				<div class="medium-3 large-3 columns">
+					<img src="img/logo_ifba3.png"></img>
+				</div>
+				<div class="medium-8 large-8 columns medium-centered">
+					<p class="texto-footer">Projeto desenvolvido pelo Curso de
+						Bacharelado em Sistemas de Informação.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/jquery-ui.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script src="js/foundation/foundation.topbar.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<script>
+		$(function() {
+			$(".calendario").datepicker();
+		});
+	</script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>

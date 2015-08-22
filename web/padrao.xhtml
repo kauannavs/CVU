@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="pt-br" > <![endif]-->
+<html class="no-js" lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta charset="utf-8" />
+<!-- If you delete this meta tag World War Z will become a reality -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PLUGIN</title>
+
+<!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/jquery.timepicker.css" />
+<link rel="stylesheet" href="css/template_plugin.css" />
+
+</head>
+<body>
+	<ui:insert name="menuPadraoTopo">
+		<ui:include src="/menu/menu_padrao_topo.xhtml" />
+	</ui:insert>
+
+	<div class="row">
+		<div class="medium-12 large-12 columns">
+			<ui:insert name="menuPadraoLateral">
+				<ui:include src="/menu/menu_padrao_lateral.xhtml" />
+			</ui:insert>
+			<div class="medium-9 large-9 columns">
+				<div class="titulo-faixa">
+					<h3>TIPOGRAFIA</h3>
+				</div>
+				<div class="panel-plugin-padrao">
+
+					<h3>Nível 1 Título</h3>
+					<br /> <strong>Subtítulo</strong><br /> <br />
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+
+					<h4>Nível 2 Título</h4>
+					<p class="text-left">Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua.</p>
+					<br />
+
+					<h5>Nível 3 Título</h5>
+					<p class="text-right">Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua.</p>
+					<br />
+
+					<div class="row">
+						<div class="medium-3 large-3 columns">
+							<ul class="disc">
+								<li>Lista:</li>
+								<li>Item</li>
+								<li>Item</li>
+							</ul>
+						</div>
+
+						<div class="medium-9 large-9 columns">
+							<ol>
+								<li>Lista:</li>
+								<li>Item</li>
+								<li>Item</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="medium-3 large-3 columns"></div>
+				<div class="medium-9 medium-right large-9 columns">
+					<div class="titulo-faixa">
+						<h3>ELEMENTOS FORMULÁRIO</h3>
+					</div>
+
+					<div class="panel-plugin-padrao">
+						<h:form>
+							<div class="row">
+								<div class="medium-12 medium-centered large-12 columns">
+									<label>Entrada:<font>*</font> <span>(Alguma
+											observação)</span><br /> <h:inputText name="Entrada"
+											placeholder="Input padrão" value="#{padrao.texto}" />
+									</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="medium-4 large-4 columns">
+									<label>Select box: <h:selectOneListbox id="selecao"
+											value="#{padrao.selecao}" size="1">
+											<f:selectItem itemLabel="Opção 1" itemValue="1" />
+											<f:selectItem itemLabel="Opção 2" itemValue="2" />
+											<f:selectItem itemLabel="Opção 3" itemValue="3" />
+										</h:selectOneListbox>
+									</label>
+								</div>
+
+								<div class="medium-4 large-4 columns">
+									<label>Data: <h:inputText id="calendario"
+											value="#{padrao.data}" styleClass="calendario">
+											<f:convertDateTime pattern="dd/mm/yyyy" />
+										</h:inputText>
+									</label>
+								</div>
+
+								<div class="medium-4 large-4 columns">
+									<label>Hora/Minuto: <h:inputText id="horario"
+											value="#{padrao.horario}" styleClass="horario">
+											<f:convertDateTime pattern="HH:mm:ss" />
+										</h:inputText>
+									</label>
+								</div>
+
+							</div>
+
+
+							<div class="row">
+								<div class="medium-6 large-6 columns">
+									<label>Botões radio: <br /> <h:selectOneRadio
+											id="sexo" value="#{padrao.texto}">
+											<f:selectItem itemLabel="Masculino" itemValue="Masculino" />
+											<f:selectItem itemLabel="Feminino" itemValue="Feminino" />
+										</h:selectOneRadio>
+									</label>
+								</div>
+
+								<div class="medium-6 large-6 columns">
+									<label>Botões checkbox: <br /> <h:selectManyCheckbox
+											id="opcoes" value="#{padrao.texto}">
+											<f:selectItem itemLabel="Opção A" itemValue="Opção A" />
+											<f:selectItem itemLabel="Opção B" itemValue="Opção B" />
+										</h:selectManyCheckbox>
+									</label>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="medium-12 large-12 columns">
+									<label>Área de Texto: <h:inputTextarea
+											placeholder="Texto" value="#{padrao.texto}" readonly="false" />
+									</label>
+								</div>
+							</div>
+
+
+							<fieldset>
+								<legend>Legenda Fieldset</legend>
+								<div class="row">
+									<div class="medium-6 large-6 columns">
+										<label>Entrada: <h:inputText type="text"
+												name="Entrada" placeholder="Input padrão"
+												value="#{padrao.texto}" />
+										</label>
+									</div>
+									<div class="medium-6 large-6 columns">
+										<label>Entrada: <h:inputText type="text"
+												name="Entrada" placeholder="Input padrão"
+												value="#{padrao.texto}" />
+										</label>
+									</div>
+								</div>
+							</fieldset>
+
+							<div class="row">
+								<div class="medium-6 large-6 columns">
+									<h:outputLabel value="Entrada inválida!" class="error"
+										rendered="#{padrao.texto}" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="medium-3 large-3 columns">
+									<h:commandButton id="pequeno"
+										onclick="if (!confirm('Deseja excluir este registro?')) return false"
+										class="button small success radius" value="Pequeno"
+										actionListener="#{padrao.acao}" />
+								</div>
+
+								<div class="medium-3 large-3 columns">
+									<h:commandButton id="simples" class="button success radius"
+										value="Simples" actionListener="#{padrao.acao}" />
+								</div>
+
+								<div class="medium-3 large-3 columns">
+									<h:commandButton id="simples2" class="button" value="Simples"
+										actionListener="#{padrao.acao}" />
+								</div>
+
+								<div class="medium-3 large-3 columns">
+									<h:commandButton id="grande"
+										class="button large success radius" value="Grande"
+										actionListener="#{padrao.acao}" />
+								</div>
+
+								<div class="row">
+									<div class="medium-6 large-6 columns">
+										<h:commandButton id="expandido" class="button expand right"
+											value="Expandido" actionListener="#{padrao.acao}" />
+									</div>
+
+									<div class="medium-3 large-3 columns">
+										<h:commandButton id="alerta" class="button alert left"
+											value="Alerta" actionListener="#{padrao.acao}" />
+									</div>
+
+									<div class="medium-3 large-3 columns">
+										<h:commandButton id="arredondado"
+											class="button round success right" value="Arredondado"
+											actionListener="#{padrao.acao}" />
+									</div>
+
+								</div>
+
+							</div>
+						</h:form>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="medium-3 large-3 columns"></div>
+				<div class="medium-9 large-9 columns">
+					<div class="titulo-faixa">
+						<h3>TABELA</h3>
+					</div>
+					<div class="panel-plugin-padrao">
+						<div class="row">
+							<div class="medium-12 large-12 columns">
+								<table>
+									<thead>
+										<tr>
+											<th width="100">Table Header</th>
+											<th>Table Header</th>
+											<th width="80">Table Header</th>
+											<th width="80">Table Header</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Lorem ipsum dolor</td>
+											<td>Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit.</td>
+											<td>Lorem ipsum dolor</td>
+											<td>Lorem ipsum dolor</td>
+										</tr>
+										<tr>
+											<td>Lorem ipsum dolor</td>
+											<td>Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit.</td>
+											<td>Lorem ipsum dolor</td>
+											<td>Lorem ipsum dolor</td>
+										</tr>
+										<tr>
+											<td>Lorem ipsum dolor</td>
+											<td>Lorem ipsum dolor sit amet, consectetur adipiscing
+												elit</td>
+											<td>Lorem ipsum dolor</td>
+											<td>Lorem ipsum dolor</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="row">
+							<div class="medium-12 large-12 columns">
+								<ul class="inline-list">
+									<li><a href="#">Link 1</a></li>
+									<li><a href="#">Link 2</a></li>
+									<li><a href="#">Link 3</a></li>
+									<li><a href="#">Link 4</a></li>
+									<li><a href="#">Link 5</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="row">
+			<div class="medium-12 large-12 columns">
+				<div class="medium-3 large-3 columns">
+					<img src="img/logo_ifba3.png"></img>
+				</div>
+				<div class="medium-8 large-8 columns medium-centered">
+					<p class="texto-footer">Projeto desenvolvido pelo Curso de
+						Bacharelado em Sistemas de Informação.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/jquery-ui.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script src="js/foundation/foundation.topbar.js"></script>
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="js/vendor/jquery.timepicker.js"></script>
+
+	<script>
+		$(function() {
+			$(".calendario")
+					.datepicker(
+							{
+								dateFormat : 'dd/mm/yy',
+								dayNames : [ 'Domingo', 'Segunda', 'Terça',
+										'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
+								dayNamesMin : [ 'D', 'S', 'T', 'Q', 'Q', 'S',
+										'S', 'D' ],
+								dayNamesShort : [ 'Dom', 'Seg', 'Ter', 'Qua',
+										'Qui', 'Sex', 'Sáb', 'Dom' ],
+								monthNames : [ 'Janeiro', 'Fevereiro', 'Março',
+										'Abril', 'Maio', 'Junho', 'Julho',
+										'Agosto', 'Setembro', 'Outubro',
+										'Novembro', 'Dezembro' ],
+								monthNamesShort : [ 'Jan', 'Fev', 'Mar', 'Abr',
+										'Mai', 'Jun', 'Jul', 'Ago', 'Set',
+										'Out', 'Nov', 'Dez' ],
+								nextText : ' Próximo',
+								prevText : 'Anterior &#124;'
+							});
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('.horario').timepicker({
+				timeFormat : 'HH:mm:ss',
+				minTime : '06:00:00', // 11:45:00 AM,
+				maxHour : 24,
+				maxMinutes : 45,
+				startTime : new Date(0, 0, 0, 6, 0, 0), // 3:00:00 PM - noon
+				interval : 15
+			// 15 minutes
+			});
+		});
+	</script>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>

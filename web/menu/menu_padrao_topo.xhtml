@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <body>
+	    <ui:composition>
+			<div class="fixed">	
+				<nav class="top-bar docs-bar" data-topbar="topbar">
+						<ul class="title-area">	
+							<ul class="small-block-grid-1">
+		   						<br/>
+		 						<li><a href="index.ifba"><img src="img/logo_plugin2.png"></img></a></li>		
+		  					</ul>	
+							<li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>	
+						</ul>
+						<div class="right conta-usuario">
+		  					<p>Olá, <strong>
+		  					<ui:repeat var="a" value="#{acesso.pesquisarUsuarioLogado()}">#{a}
+		  									</ui:repeat>
+		  							</strong> [	<a href="sair.ifba" onclick="#{acesso.validaAcesso()}">Sair</a> ]
+		  					</p>
+		  				</div>	
+						<br/>
+						<section class="top-bar-section">
+							<ul class="right">
+								<li><a href="cadastro_usuario.ifba" >Cadastre-se</a></li>
+								<li><a href="login.ifba">Login</a></li>
+								<li><a href="pesquisa_produto.ifba">Produtos</a></li>
+								<li><a href="cadastro_produto.ifba">Anunciar</a></li>
+								<li><a href="pesquisa_usuario.ifba">Usuários</a></li>
+								<li><a href="#">Compras de Usuários</a></li>
+								<li><a href="pesquisa_meusprodutos.ifba">Meus anuncios</a></li>
+								<li><a href="#">Mensagem</a></li>
+<!-- 								<li class="has-dropdown"><a href="#">Link 4</a> -->
+<!-- 									<ul class="dropdown plugin"> -->
+<!-- 										<li><a href="#">Submenu 1</a></li> -->
+<!-- 										<li><a href="#">Submenu 2</a></li> -->
+<!-- 									</ul> -->
+<!-- 								</li> -->
+							</ul>
+							<div class="nome-projeto">
+							<ul class="left">
+								<li>
+									<a href="pesquisa_produto.ifba" style="font-family: initial;font-style: oblique;font-weight: bold;font-size: xx-large;"> C V U </a>
+								</li>
+							</ul>
+							</div>	
+						</section>
+				</nav>
+				<section id="github" class="githubissues hide-for-small-down">
+		  		</section>
+		  	</div>
+		  	<br/>
+		  	<br/>
+		  	<br/>
+	    </ui:composition>
+    </body>
+</html>
